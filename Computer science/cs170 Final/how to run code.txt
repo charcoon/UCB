@@ -1,0 +1,17 @@
+1. To test one problem:
+
+run these two lines to solve a problem and visualize it
+
+
+python python\solve.py inputs\small\195.in --solver=group case.out
+
+python python\visualize.py inputs\small\195.in out.svg --with-solution case.out
+
+
+2. To test whole folder
+
+- delete the "outputs" folder 
+
+- run this command:
+
+python .\python\solve_all.py .\inputs\ .\outputs\

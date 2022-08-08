@@ -1,0 +1,18 @@
+---
+:id: 104140914
+:submitters:
+- :name: Varun Sewal
+  :email: varunsewal17@berkeley.edu
+- :name: Shubham Singh
+  :email: ssingh17@berkeley.edu
+- :name: Sidhartha Barua
+  :email: sbarua01@berkeley.edu
+- :name: Charlie Zhou
+  :email: zogo1767008598@berkeley.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-12-08 21:18:03.736067000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2021-12-08 13:18:03.736067000 Z
+:status: processed
+:score: 93.0

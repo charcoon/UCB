@@ -1,0 +1,24 @@
+Gitlet Design Document
+----------------------
+During the designing of this project, I investigated how git itself implements those features. Then I chose to leverage some ideas from git.
+
+Classes and Data Structures
+---------------------------
+I'm leveraging some of new Java APIs to represent the logic, including Paths/Files(introduced in JDK7), Instant/DateTimeFormatter(introduced in JDK8).
+The core logic of the Gitlet is achieved by Gitlet class. Gitlet will manipulate several entities: Commit, Branch, StagedFiles.
+Also an IO helper class was created to hold several IO operations such as read a commit from a file.
+A global-wise file store(FileStore class) was introduced to keep all file information.
+
+Algorithms
+----------
+A Breath-first search was implemented to search for a Commit's all parents from the distance to it. See findAncestors in Gitlet.
+
+Persistence
+-----------
+Gitlet will create several folders and files to hold the information which should be persistent.
+All files under blob folder are copied directly from working directory and can be restored easily.
+Branches folder contains all the branches with its head commit hash.
+Commits folder has file name with commit hash and the content was directly serialized by Java's built-in serialization mechanism.
+branch file represents the current branch.
+head file represents the head pointer.
+index file represents the staging area.
